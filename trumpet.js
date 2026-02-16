@@ -3,14 +3,17 @@ const click1 = new Audio('audio/click1.mp3');
 const click2 = new Audio('audio/click2.mp3');
 const hover = new Audio ('audio/hover.wav');
 const arp = new Audio ('audio/arpeggio.mp3');
+const valve1 = document.getElementById('valve1')
+const valve2 = document.getElementById('valve2')
+const valve3 = document.getElementById('valve3')
 const keyText = document.getElementById('keytext');
 const keyStuff = document.getElementById('keystuff');
-let twelvetet = true;
+let twelvetet = false;
 let controlRaised = true;
 let root = Math.pow(2, (0/12));
 let playingKey = "Bb";
 let valveKeys = ["p", "o", "i"];
-const partialKeys = ["z", "x", "c", "v", "b", "n", "m", ",", "."];
+const partialKeys = ['shift', "z", "x", "c", "v", "b", "n", "m", ",", "."];
 const tuningSwitch = document.getElementById("tuningswitch");
 const keyDropdown = document.getElementById("key");
 const controlSwitch = document.getElementById("controlswitch");
@@ -96,12 +99,19 @@ keyDropdown.addEventListener('change', () => {
 })
 controlSwitch.addEventListener('click', () => {
     controlRaised = !controlRaised;
-    console.log(controlRaised)
+    if(controlRaised == false) {
+        valve1.textContent = "i";
+        valve3.textContent = "p";
+    } else {
+        valve1.textContent = "p";
+        valve3.textContent = "i";
+    }
 })
 
 function getPlaybackRate(key, position) {
     if(twelvetet == true) {
         baseFactors = {
+        shift: Math.pow(2, (0/12)) * root,
         z: Math.pow(2, (0/12)) * 2 * root,
         x: Math.pow(2, (7/12)) * 2 * root,
         c: Math.pow(2, (12/12)) * 2 * root,
@@ -115,6 +125,7 @@ function getPlaybackRate(key, position) {
     }
     else {
         baseFactors = {
+        shift: 1 * root,
         z: 1 * 2 * root,
         x: 1.5 * 2 * root,
         c: 2 * 2 * root,
@@ -224,7 +235,7 @@ document.addEventListener('keydown', (check) => {
     }
     checkFingers();
     if(partialKeys.includes(key)) {
-        activeKey = check.key;
+        activeKey = key;
         playBb(getPlaybackRate(activeKey, position));
     }
     if(activeKey !== null && activeKey !== key && partialKeys.includes(activeKey)) {
