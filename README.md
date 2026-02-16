@@ -10,7 +10,7 @@ tuning system toggle has returned as well! <br><br>
 
 
 made using vscode (html, javascript, css) <br>
-link to play: [https://azzyblooms.github.io/trumpet/](https://azzyblooms.github.io/trumpet/)
+link to play: [https://azzyblooms.github.io/brass.js/](https://azzyblooms.github.io/brass.js/)
 <br><br>
 <div align="center">
     <img src="https://cdn.hackclub.com/019c15aa-6af2-7359-8c91-2ef48ee2bd37/untitled83_20260119235239.png"
