@@ -1,4 +1,4 @@
-# trumpet
+# brass.js
 hehehe doot doot
 <br>
 this is a trumpet you can use in a web browser!!!!!! (spiritual successor to trombonline) <br>
