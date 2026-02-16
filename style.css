@@ -1,5 +1,89 @@
 body {
     font-family:cursive;
     text-align:center;
+    background-color: antiquewhite;
+    margin: 0;
+}
+#title {
+    border: 2px solid black;
+    width: 100vw;
+    font-size:30px;
+    border-left:0px;
+    border-right:0px;
+    padding: 5px;
+    background-color: rgb(233, 219, 200);
+}
+#subtitle {
+    border: 2px solid black;
+    width: 200px;
+    border-top: 0px;
+    background-color: rgb(233, 219, 200);
+    transform: translateY(-2px);
+    font-size:20px;
+    margin:auto;
+}
+.buttons {
+    border: 2px solid black;
+    font-size:20px;
+    font-family:cursive;
+    background-color:rgb(233, 219, 200);
+    transition: transform ease 200ms;
+}
+.buttons:hover {
+    transform:scale(1.15);
+}
+.buttons:active {
+    background-color:rgb(212, 197, 180);
+}
+.divider {
+    height:20px;
+}
+#keytext {
+    border: 2px solid black;
+    font-size:20px;
+    padding:1px;
+    border-right:0px;
+    font-family:cursive;
+    width:200px;
+    display:inline;
+    background-color:rgb(233, 219, 200);
+}
+#key {
+    border: 2px solid black;
+    border-left:0px;
+    padding:1px;
+    font-size:20px;
+    font-family:cursive;
+    appearance: none;
+    background-color:rgb(233, 219, 200);
+}
+#key:focus {
+    border-bottom:0px;
+    box-shadow:none;
+    outline:none;
+    background-color:rgb(212, 197, 180);
     
+}
+#key:hover {
+    background-color:rgb(212, 197, 180);
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+}
+.keystuff {
+    padding-left:10px;
+    display:inline-block;
+    transition: transform ease 200ms;
+}
+.keystuff:hover {
+    transform: scale(1.15);
+}
+#tuningstuff {
+    display:inline-block;
+    padding-right:10px;
+}
+#controlstuff {
+    display:inline-block;
+    padding-left:5px;
+    padding-right:5px;
 }
