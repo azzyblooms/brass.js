@@ -24,6 +24,9 @@ let currentBb = null;
 let position = 1
 const trumpetImage = document.getElementById('trumpet');
 
+document.addEventListener('DOMContentLoaded', () => {
+    controlRaised = false;
+})
 controlSwitch.addEventListener('mouseenter', () => {
     hover.cloneNode(true).play();
 })
